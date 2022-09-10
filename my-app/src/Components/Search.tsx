@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import DogCard from "./Cards"
 import BREED_LIST from "../const";
+import TitleCard from "./Title";
 import { useNavigate } from "react-router-dom";
 import { Button, Segment, Input } from "semantic-ui-react";
 
@@ -69,13 +70,15 @@ async function shuffle() {
             <Button onClick={handleSubmit}>Home</Button>
           </Button.Group>
       
-      
+        
       <div className="filtered-list">
-        {
-          filteredList.map( (ele) => {
-            return <p>{ele}</p>
-          })
-        }
+      {
+        filteredList.map( (ele: any) => {
+          return(
+            <TitleCard title={ele}/>
+          )
+        })
+      }
       </div>
 
       <br/>
@@ -92,6 +95,7 @@ async function shuffle() {
           })
         }
       </div>
+      
       <footer>
         MSA Phase 3 | Front-end | tsoukent97@outlook.com | <a href="https://github.com/tsoukent97" target="blank">Github</a> 
       </footer>

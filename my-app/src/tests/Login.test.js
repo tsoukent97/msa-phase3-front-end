@@ -1,4 +1,3 @@
-import React from "react";
 import { screen, render } from "@testing-library/react"
 // import supertest from "supertest";
 import Login from "../Components/Login";
