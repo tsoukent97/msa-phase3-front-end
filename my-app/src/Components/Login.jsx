@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import jwt_decode from "jwt-decode";
 const google = window.google;
 
@@ -9,17 +9,14 @@ function Login() {
     const navigate = useNavigate();
     const [ user, setUser ] = useState({});
     
-    function dogSubmit (e:any) {
+    function dogSubmit (e) {
         e.preventDefault()
         navigate('/Search')
 
     };
 
-    function handleCallbackResponse(response: any) {
-        console.log('Endocded JWT ID token: ' + response.credential);
-        var useObject = jwt_decode(response.credential);
-        console.log(useObject);
-        setUser(useObject);
+    function handleCallbackResponse(response) {
+        setUser(jwt_decode(response.credential));
         document.getElementById("signInDiv").hidden = true;
     };
 
@@ -29,7 +26,6 @@ function Login() {
     };
 
     useEffect(() => {
-        /* Global google */
         google.accounts.id.initialize({
             client_id: "200583476302-o2kfrf01dg909e845v91lutsphhn345o.apps.googleusercontent.com",
             callback: handleCallbackResponse
@@ -49,18 +45,19 @@ function Login() {
                 >
                     <div className="form-container">
                         <form>
-                            <h4>Welcome</h4>
-                            <div className="signInDiv">
+                            <h4>Sign In</h4>
+                            
+                            <div id="signInDiv"></div>
                             { Object.keys(user).length !==0 && 
                                 <button onClick={ (e) => handleSignOut(e) }>Sign Out</button>
                             }
                             {user &&
                                 <div>
-                                <img src={user.picture} alt=""></img>
-                                <h3>{user.name}</h3>
+                                    <img src={user.picture} alt=""></img>
+                                    <h3>{user.name}</h3>
                                 </div>
                             }
-                            </div>
+                            
                             <button 
                                 type="submit" 
                                 className="form-button"

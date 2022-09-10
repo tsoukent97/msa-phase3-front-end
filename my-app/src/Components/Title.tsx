@@ -5,20 +5,20 @@ function TitleCard(prop:any) {
     const ScaledImage = styled('div')(({ theme }) => ({
         padding: theme.spacing(1),
         [theme.breakpoints.down('md')]: {
-          fontSize: 12
+          fontSize: 10
         },
         [theme.breakpoints.up('md')]: {
           
-          fontSize: 24
+          fontSize: 14
         },
         [theme.breakpoints.up('lg')]: {
-          fontSize: 36
+          fontSize: 18
         },
       }));
 
     return (
         <ScaledImage>
-            <p>Breed: {prop.title}</p>
+            <p>{prop.title}</p>
         </ScaledImage>
     );
 }
