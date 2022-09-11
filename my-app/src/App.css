@@ -55,10 +55,10 @@ h1 {
 }
 
 .form-container footer {
-  font-size: 15px;
+  font-size: 20px;
   margin-top: 50px;
-  word-spacing: 2px;
-  color: #080710;
+  word-spacing: 1.5px;
+  color: red;
 }
 
 @media only screen and (max-width: 490px) {
@@ -110,13 +110,29 @@ body{
   border: none;
 }
 
-#signInDiv {
+.form-container #signInDiv {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
+  color: black;
 }
 
+#signout-button {
+  color: #080710;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+#user-welcome {
+  color: #080710;
+
+}
+
+#user-photo {
+  border-radius: 2px;
+  margin-bottom: -15px;
+}
 ::placeholder{
   color: #e5e5e5;
 }

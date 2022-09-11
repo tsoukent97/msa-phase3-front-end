@@ -49,12 +49,12 @@ function Login() {
                             
                             <div id="signInDiv"></div>
                             { Object.keys(user).length !==0 && 
-                                <button onClick={ (e) => handleSignOut(e) }>Sign Out</button>
+                                <button onClick={ (e) => handleSignOut(e) } id="signout-button">Sign Out</button>
                             }
                             {user &&
                                 <div>
-                                    <img src={user.picture} alt=""></img>
-                                    <h3>{user.name}</h3>
+                                    <img id="user-photo" src={user.picture} alt=""></img>
+                                    <h2 id="user-welcome">{user.name}</h2>
                                 </div>
                             }
                             
