@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import jwt_decode from "jwt-decode";
+import jwt_decode from 'jwt-decode';
 const google = window.google;
 
 function Login() {

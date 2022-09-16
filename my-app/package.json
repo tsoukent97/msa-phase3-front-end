@@ -76,5 +76,9 @@
     "react-test-renderer": "^18.2.0",
     "supertest": "^6.2.4",
     "webpack": "^5.74.0"
-  }
+  },
+  "description": "Please ensure that you have the required software stated in the README.md in the parent folder.",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }

@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import axios from "axios";
-import { useEffect, useState } from "react";
-import DogCard from "./Cards"
-import BREED_LIST from "../const";
-import TitleCard from "./Title";
-import { useNavigate } from "react-router-dom";
-import { Button, Segment, Input } from "semantic-ui-react";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import DogCard from './Cards'
+import BREED_LIST from '../const';
+import TitleCard from './Title';
+import { useNavigate } from 'react-router-dom';
+import { Button, Segment, Input } from 'semantic-ui-react';
 
 function Search() {
   
