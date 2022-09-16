@@ -2,7 +2,7 @@ function DogCard (prop:any) {
 
 
     return (
-            <div> 
+            <div data-testid="card-1"> 
                 <img className="image-container" src={prop.imageLink} alt=""></img>
             </div>
     );
