@@ -1,5 +1,5 @@
 Name: Ding-Kai Tsou | 
-Program: MSA Phase 3 frontend
+Program: MSA Phase 3 frontend |
 Advanced Features List:
 1. UI Scalability with window size
 2. Mobile first development (using media query breakpoints, etc)
